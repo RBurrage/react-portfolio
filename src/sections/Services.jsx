@@ -1,5 +1,5 @@
 import SectionLayout from "../components/SectionLayout";
-import Card from "../components/Card";
+import ServicesCard from "../components/ServicesCard";
 
 export default function Services() {
   const services = [
@@ -109,7 +109,7 @@ export default function Services() {
       bg="gray">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((item) => (
-          <Card key={item.id} {...item} />
+          <ServicesCard key={item.id} {...item} />
         ))}
       </div>
     </SectionLayout>

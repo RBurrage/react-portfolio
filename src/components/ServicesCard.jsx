@@ -1,4 +1,4 @@
-export default function Card({ title, description, icon, button }) {
+export default function ServicesCard({ title, description, icon, button }) {
   return (
     <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 card-hover">
       {icon}

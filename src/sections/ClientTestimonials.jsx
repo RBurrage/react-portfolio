@@ -1,4 +1,5 @@
 import SectionLayout from "../components/SectionLayout";
+import TestimonialsCard from "../components/TestimonialsCard";
 
 export default function ClientTestimonials() {
   const testimonials = [
@@ -35,28 +36,9 @@ export default function ClientTestimonials() {
       title="Client Testimonials"
       description="What people say about working with me.">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Testimonial 1 */}
-        <div className="bg-white p-8 rounded-xl shadow-sm">
-          <div className="flex items-center mb-6">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                alt="Client"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <h4 className="font-semibold">Sarah Johnson</h4>
-              <p className="text-gray-500 text-sm">CEO, TechStart</p>
-            </div>
-          </div>
-          <p className="text-gray-600 mb-6">
-            "Alex transformed our outdated website into a modern,
-            high-performing platform that has significantly increased our
-            conversion rates. His attention to detail and creative solutions
-            were impressive."
-          </p>
-        </div>
+        {testimonials.map((item) => (
+          <TestimonialsCard key={item.id} {...item} />
+        ))}
       </div>
     </SectionLayout>
   );
